@@ -12,11 +12,13 @@ public class AppConfig {
         return helloWorld;
     }
 
-    @Bean(name="Cat")
+    @Bean(name="pushistic")
+    @Scope("prototype")
     public Cat getCat() {
         Cat cat = new Cat();
-        cat.setMessage("Meow!");
+        cat.setMessage("Meow-Meow\n  人____人\n≧(◕ ‿‿ ◕)≦");
         return cat;
+
     }
 
 

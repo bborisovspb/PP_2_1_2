@@ -1,6 +1,3 @@
-import org.springframework.stereotype.Component;
-
-@Component("catBean")
 public class Cat {
 
     private String message;

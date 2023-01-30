@@ -36,5 +36,32 @@ public class App {
         HelloWorld bean =
                 (HelloWorld) applicationContext.getBean("helloworld");
         System.out.println(bean.getMessage());
+
+        System.out.println("-----------------");
+
+        ApplicationContext applicationContext1 =
+                new AnnotationConfigApplicationContext(AppConfig.class);
+        HelloWorld bean1 =
+                (HelloWorld) applicationContext.getBean("helloworld");
+        System.out.println(bean1.getMessage());
+        System.out.println("-----------------");
+        ApplicationContext applicationContext2 =
+                new AnnotationConfigApplicationContext(AppConfig.class);
+        Cat bean2 =
+                (Cat) applicationContext.getBean("pushistic");
+        System.out.println(bean2.getMessage());
+
+        System.out.println("-----------------");
+
+        ApplicationContext applicationContext3 =
+                new AnnotationConfigApplicationContext(AppConfig.class);
+        Cat bean3 =
+                (Cat) applicationContext.getBean("pushistic");
+        System.out.println(bean3.getMessage());
+
+        System.out.println("-----------------");
+
+        System.out.println("Сравнение хэллоу: " + (bean==bean1));
+        System.out.println("Сравнение котов: " + (bean2==bean3));
     }
 }
